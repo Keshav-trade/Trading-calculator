@@ -25,14 +25,14 @@
   <input type="number" id="qty" placeholder="Enter Qty" oninput="calc()">
   <div class="result" id="r30"></div>
   <div class="result" id="r50"></div>
-  <div class="result" id="r75"></div>
+  <div class="result" id="r25"></div>
 
   <script>
     function calc() {
       let qty = document.getElementById("qty").value;
       document.getElementById("r30").innerText = "30%: " + Math.floor(qty * 0.3);
       document.getElementById("r50").innerText = "50%: " + Math.floor(qty * 0.5);
-      document.getElementById("r75").innerText = "75%: " + Math.floor(qty * 0.75);
+      document.getElementById("r25").innerText = "25%: " + Math.floor(qty * 0.25);
     }
   </script>
 </body>
