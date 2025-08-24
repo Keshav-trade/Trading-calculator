@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f9;
+    }
+    input {
+      padding: 8px;
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .result {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Smart Trading Calculator</h3>
+  <input type="number" id="qty" placeholder="Enter Qty" oninput="calc()">
+  <div class="result" id="r30"></div>
+  <div class="result" id="r50"></div>
+  <div class="result" id="r25"></div>
+
+  <script>
+    function calc() {
+      let qty = document.getElementById("qty").value;
+      document.getElementById("r30").innerText = "30%: " + Math.floor(qty * 0.3);
+      document.getElementById("r50").innerText = "50%: " + Math.floor(qty * 0.5);
+      document.getElementById("r25").innerText = "25%: " + Math.floor(qty * 0.25);
+    }
+  </script>
+</body>
+</html>
