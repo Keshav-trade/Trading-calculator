@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Calculator</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #f9f9f9, #e6ecf5);
+    }
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    h3 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      width: 90%;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    input:focus {
+      border-color: #0078d7;
+    }
+    .result {
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: #f8faff;
+      border-radius: 8px;
+    }
+    .label {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>📊 Smart Trading Calculator</h3>
+    <input type="number" id="qty" placeholder="Enter Quantity" oninput="calc()">
+    <div class="result"><span class="label">30%</span><span id="r30"></span></div>
+    <div class="result"><span class="label">50%</span><span id="r50"></span></div>
+    <div class="result"><span class="label">25%</span><span id="r25"></span></div>
+  </div>
+
+  <script>
+    function calc() {
+      let qty = document.getElementById("qty").value;
+      document.getElementById("r30").innerText = Math.floor(qty * 0.3);
+      document.getElementById("r50").innerText = Math.floor(qty * 0.5);
+      document.getElementById("r25").innerText = Math.floor(qty * 0.25);
+    }
+  </script>
+</body>
+</html>
